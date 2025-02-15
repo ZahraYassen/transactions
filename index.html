@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الشؤون الإدارية والوظيفية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Almarai", serif;
+        background-color: #1a1a1d;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-container {
+        width: 70%;
+      }
+      .main-category {
+        background-color: #4b4376;
+        color: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+      .main-category:hover {
+        transition: 0.3s;
+        background-color: #432e54;
+        transform: translate(2px);
+      }
+      body h1 {
+        text-align: center;
+        background-color: #ae445a;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      .sub-category {
+        background-color: #948fb5;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .sub-category:hover {
+        transition: 0.3s;
+        background-color: #432e54;
+        color: white;
+        transform: translate(2px);
+      }
+      .transaction {
+    
+        background-color: #E8BCB9;
+        color: black;
+        padding: 8px;
+        margin: 4px 0;
+        border-radius: 6px;
+      }
+      .transaction:hover {
+        transition: 0.3s;
+        background-color: #ae445a;
+        color: white;
+        transform: translate(2px);
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>تصنيف المعاملات</h1>
+      <!-- FIRST CATEGORY -->
+      <div class="first-category">
+        <div class="main-category" onclick="toggleVisibility('admin-section')">
+          الشؤون الإدارية والوظيفية
+        </div>
+        <div id="admin-section" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation')"
+          >
+            التوظيف والاستقالة
+          </div>
+          <div id="employment-resignation" class="hidden">
+            <div class="transaction">توظيف</div>
+            <div class="transaction">استقالة</div>
+            <div class="transaction">طي قيد</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations')">
+            الإجازات
+          </div>
+          <div id="vacations" class="hidden">
+            <div class="transaction">إجازات عادية</div>
+            <div class="transaction">إجازات اضطرارية</div>
+            <div class="transaction">إجازة استثنائية</div>
+            <div class="transaction">إجازات مرضية</div>
+            <div class="transaction">إجازة رياضية</div>
+            <div class="transaction">تمديد إجازة</div>
+            <div class="transaction">قرار منح إجازة استثنائية</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('assignments')">
+            الانتدابات والتكليفات
+          </div>
+          <div id="assignments" class="hidden">
+            <div class="transaction">انتداب</div>
+            <div class="transaction">قرار انتداب</div>
+            <div class="transaction">قرار ندب</div>
+            <div class="transaction">مباشرة</div>
+            <div class="transaction">إنهاء مهمة</div>
+            <div class="transaction">نقل متعاقد</div>
+            <div class="transaction">تكليف قيام بعمل</div>
+            <div class="transaction">ابتعاث</div>
+            <div class="transaction">حضور مؤتمرات</div>
+            <div class="transaction">حضور دورات</div>
+            <div class="transaction">حضور ندوات</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('warnings')">
+            الإنذارات والتنبيهات
+          </div>
+          <div id="warnings" class="hidden">
+            <div class="transaction">لفت نظر</div>
+            <div class="transaction">إنذار موظف</div>
+            <div class="transaction">حسم مبلغ</div>
+            <div class="transaction">جزاءات</div>
+          </div>
+        </div>
+      </div>
+      <!-- SECOND CATEGORY -->
+      <div class="second-category">
+        <div
+          class="main-category"
+          onclick="toggleVisibility('admin-section-2')"
+        >
+          الشؤون المالية والمحاسبية
+        </div>
+        <div id="admin-section-2" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation-2')"
+          >
+            الرواتب والمستحقات
+          </div>
+          <div id="employment-resignation-2" class="hidden">
+            <div class="transaction">رواتب منسوبي الأمانة</div>
+            <div class="transaction">صرف تعويضات</div>
+            <div class="transaction">صرف استحقاقات</div>
+            <div class="transaction">مكافأة</div>
+            <div class="transaction">مستحقات منتدبين</div>
+            <div class="transaction">حجز مستحقات</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations-2')">
+            العقود والتأجير
+          </div>
+          <div id="vacations-2" class="hidden">
+            <div class="transaction">تجديد عقد</div>
+            <div class="transaction">عقد جديد</div>
+            <div class="transaction">تجديد عقد استئجار</div>
+            <div class="transaction">تأجير عقارات</div>
+            <div class="transaction">بيع زوائد</div>
+            <div class="transaction">شراء زوائد</div>
+            <div class="transaction">عقود الاستئجار</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('assignments-2')">
+            الفواتير والالتزامات المالية
+          </div>
+          <div id="assignments-2" class="hidden">
+            <div class="transaction">تسديد مستحقات</div>
+            <div class="transaction">تسديد فواتير</div>
+            <div class="transaction">الحساب الشهري</div>
+            <div class="transaction">الحساب الختامي</div>
+            <div class="transaction">مستخلصات مشاريع</div>
+            <div class="transaction">مسيرات مالية</div>
+          </div>
+        </div>
+      </div>
+      <!-- THIRD CATEGORY -->
+      <div class="second-category">
+        <div
+          class="main-category"
+          onclick="toggleVisibility('admin-section-3')"
+        >
+          الشؤون القانونية والتنظيمية
+        </div>
+        <div id="admin-section-3" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation-3')"
+          >
+            القرارات الإدارية
+          </div>
+          <div id="employment-resignation-3" class="hidden">
+            <div class="transaction">قرار تعيين</div>
+            <div class="transaction">قرار ترقية</div>
+            <div class="transaction">قرار نقل</div>
+            <div class="transaction">قرار خارج دوام</div>
+            <div class="transaction">قرار حسم</div>
+            <div class="transaction">قرار إداري</div>
+            <div class="transaction">قرار الأمين للأراضي</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations-3')">
+            القضايا والمنازعات
+          </div>
+          <div id="vacations-3" class="hidden">
+            <div class="transaction">قضايا ومنازعات</div>
+            <div class="transaction">لائحة اعتراضية</div>
+            <div class="transaction">تصديق قرارات</div>
+            <div class="transaction">تحقيق</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('assignments-3')">
+            التراخيص والموافقات
+          </div>
+          <div id="assignments-3" class="hidden">
+            <div class="transaction">رخص مهنية</div>
+            <div class="transaction">رخص محلات</div>
+            <div class="transaction">تصريح</div>
+            <div class="transaction">تعديل مهنة</div>
+            <div class="transaction">طلب مراجعة</div>
+            <div class="transaction">طلب اعتماد</div>
+          </div>
+        </div>
+      </div>
+      <!-- FOURTH CATEGORY -->
+      <div class="second-category">
+        <div
+          class="main-category"
+          onclick="toggleVisibility('admin-section-4')"
+        >
+          المشاريع والصيانة
+        </div>
+        <div id="admin-section-4" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation-4')"
+          >
+            المشاريع والتخطيط
+          </div>
+          <div id="employment-resignation-4" class="hidden">
+            <div class="transaction">مشاريع مبانٍ</div>
+            <div class="transaction">استلام المشاريع</div>
+            <div class="transaction">شراف المشاريع</div>
+            <div class="transaction">ترسية مشروع</div>
+            <div class="transaction">دراسات</div>
+            <div class="transaction">تقارير ومواصفات</div>
+            <div class="transaction">شروط ومواصفات</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations-4')">
+            الصيانة والبنية التحتية
+          </div>
+          <div id="vacations-4" class="hidden">
+            <div class="transaction">صيانة طرق</div>
+            <div class="transaction">صيانة إنارة</div>
+            <div class="transaction">صيانة سيارات</div>
+            <div class="transaction">صيانة الحدائق</div>
+            <div class="transaction">تنظيم أرض</div>
+            <div class="transaction">سفلتة وأرصفة وإنارة</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('assignments-4')">
+            المناقصات والمشتريات
+          </div>
+          <div id="assignments-4" class="hidden">
+            <div class="transaction">شراء مباشر</div>
+            <div class="transaction">مناقصات</div>
+            <div class="transaction">ترسية مناقصة</div>
+            <div class="transaction">مراجعة مناقصات</div>
+            <div class="transaction">لجان فحص</div>
+            <div class="transaction">تأمين لوازم</div>
+          </div>
+        </div>
+      </div>
+      <!-- FIFTH CATEGORY -->
+      <div class="second-category">
+        <div
+          class="main-category"
+          onclick="toggleVisibility('admin-section-5')"
+        >
+          الخدمات البلدية والمرافق العامة
+        </div>
+        <div id="admin-section-5" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation-5')"
+          >
+            البنية التحتية والمرافق
+          </div>
+          <div id="employment-resignation-5" class="hidden">
+            <div class="transaction">توصيل مرافق</div>
+            <div class="transaction">استهلاك الكهرباء</div>
+            <div class="transaction">استهلاك المياه</div>
+            <div class="transaction">إعادة المياه</div>
+            <div class="transaction">إعادة الكهرباء</div>
+            <div class="transaction">قطع الكهرباء</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations-5')">
+            الشكاوى والمخالفات
+          </div>
+          <div id="vacations-5" class="hidden">
+            <div class="transaction">شكاوى مواطنين</div>
+            <div class="transaction">شكوى مقاولين</div>
+            <div class="transaction">شكاوى إدارات</div>
+            <div class="transaction">مخالفة صحية</div>
+            <div class="transaction">رفع المخالفات</div>
+            <div class="transaction">إغلاق محل</div>
+            <div class="transaction">إلغاء رخصة محل</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('assignments-5')">
+            البيئة والصحة العامة
+          </div>
+          <div id="assignments-5" class="hidden">
+            <div class="transaction">الطب البيطري</div>
+            <div class="transaction">مكافحة حشرات</div>
+            <div class="transaction">المسالخ</div>
+            <div class="transaction">الأسواق</div>
+            <div class="transaction">الحدائق والمتنزهات</div>
+          </div>
+        </div>
+      </div>
+      <!-- SIXTH CATEGORY -->
+      <div class="second-category">
+        <div
+          class="main-category"
+          onclick="toggleVisibility('admin-section-6')"
+        >
+          المراسلات والتقارير
+        </div>
+        <div id="admin-section-6" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation-6')"
+          >
+            الخطابات والاتصالات
+          </div>
+          <div id="employment-resignation-6" class="hidden">
+            <div class="transaction">خطاب</div>
+            <div class="transaction">برقية</div>
+            <div class="transaction">فاكس</div>
+            <div class="transaction">بريد إلكتروني</div>
+            <div class="transaction">تلِكس</div>
+            <div class="transaction">خطاب شخصي</div>
+            <div class="transaction">خطاب تعزية</div>
+            <div class="transaction">خطاب دعوة</div>
+            <div class="transaction">خطاب خاص</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations-6')">
+            التقارير والمحاضر
+          </div>
+          <div id="vacations-6" class="hidden">
+            <div class="transaction">تقارير</div>
+            <div class="transaction">محضر جرد</div>
+            <div class="transaction">محضر غياب</div>
+            <div class="transaction">تقرير طبي</div>
+            <div class="transaction">تقرير جولة ميدانية</div>
+            <div class="transaction">محضر استلام</div>
+          </div>
+          <div class="sub-category" onclick="toggleVisibility('assignments-6')">
+            المراسلات الرسمية
+          </div>
+          <div id="assignments-6" class="hidden">
+            <div class="transaction">إرسال بيانات</div>
+            <div class="transaction">إرسال تقارير</div>
+            <div class="transaction">إرسال شهادة مغادرة</div>
+            <div class="transaction">إرسال نسخة</div>
+            <div class="transaction">إفادة عن توفر مواد</div>
+          </div>
+        </div>
+      </div>
+      <!-- SEVENTH CATEGORY -->
+      <div class="second-category">
+        <div
+          class="main-category"
+          onclick="toggleVisibility('admin-section-7')"
+        >
+          الممتلكات والأراضي والتخطيط
+        </div>
+        <div id="admin-section-7" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation-7')"
+          >
+            التخطيط والمسح
+          </div>
+          <div id="employment-resignation-7" class="hidden">
+            <div class="transaction">تخطيط</div>
+            <div class="transaction">تخطيط وإفراز</div>
+            <div class="transaction">رفوعات مساحية</div>
+            <div class="transaction">زوائد تنظيم</div>
+            <div class="transaction">إثبات حدود</div>
+            <div class="transaction">تعديل وإثبات ذرعة</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations-7')">
+            الأراضي والمنح
+          </div>
+          <div id="vacations-7" class="hidden">
+            <div class="transaction">نزع ملكية</div>
+            <div class="transaction">منح أراضي</div>
+            <div class="transaction">منح الدوائر الحكومية</div>
+            <div class="transaction">أراضٍ بديلة</div>
+          </div>
+          <div class="sub-category" onclick="toggleVisibility('assignments-7')">
+            التعامل مع العقارات
+          </div>
+          <div id="assignments-7" class="hidden">
+            <div class="transaction">استئجار أرض</div>
+            <div class="transaction">استئجار كشك</div>
+            <div class="transaction">نقل ملكية</div>
+            <div class="transaction">تعديل نشاط</div>
+          </div>
+        </div>
+      </div>
+      <!-- EIGHTH CATEGORY -->
+      <div class="second-category">
+        <div
+          class="main-category"
+          onclick="toggleVisibility('admin-section-8')"
+        >
+          المتابعات والإجراءات الإدارية
+        </div>
+        <div id="admin-section-8" class="hidden">
+          <div
+            class="sub-category"
+            onclick="toggleVisibility('employment-resignation-8')"
+          >
+            التعاميم والإخطارات
+          </div>
+          <div id="employment-resignation-8" class="hidden">
+            <div class="transaction">تعميم</div>
+            <div class="transaction">للتعميم</div>
+            <div class="transaction">إشعار نتيجة</div>
+            <div class="transaction">قرارات</div>
+            <div class="transaction">أوامر سامية</div>
+          </div>
+
+          <div class="sub-category" onclick="toggleVisibility('vacations-8')">
+            متابعة وإنهاء المعاملات
+          </div>
+          <div id="vacations-8" class="hidden">
+            <div class="transaction">متابعة</div>
+            <div class="transaction">استكمال دراسة</div>
+            <div class="transaction">البحث عن ممتلكات</div>
+            <div class="transaction">استفسارات</div>
+            <div class="transaction">مراجعة مناقصات</div>
+          </div>
+          <div class="sub-category" onclick="toggleVisibility('assignments-8')">
+            الإجراءات الإدارية المختلفة
+          </div>
+          <div id="assignments-8" class="hidden">
+            <div class="transaction">طلب إجراء مناقلة بين الوظائف</div>
+            <div class="transaction">طلب نقل موظف لقسم آخر</div>
+            <div class="transaction">طلب صرف انتداب</div>
+            <div class="transaction">تحوير وظيفة</div>
+            <div class="transaction">رفع وظائف</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleVisibility(id) {
+        const element = document.getElementById(id);
+        element.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
+
+<!--  -->
+<!-- <style>
+    body { font-family: Arial, sans-serif; background-color: #1A1A1D; padding: 20px; display: flex; justify-content: center; align-items: center;}
+    .main-container {width: 70%;}
+    .category { margin-bottom: 10px; cursor: pointer; background-color: #4B4376; padding: 10px; border-radius: 5px; color: white; }
+    .category:hover {transition: 0.3s; background-color: #4b437688; color: white; transform: translate(2px);}
+    .subcategories { display: none; margin-left: 20px; }
+    .subcategory { background-color: #E8BCB9; padding: 5px; border-radius: 3px; margin-top: 5px; cursor: pointer; text-align: center; }
+    .subcategory:hover {transition: 0.3s; background-color: #432E54; color: white; transform: translate(2px);}
+    body h1 {text-align: center; background-color: #AE445A; padding: 10px; border-radius: 4px;}
+</style> -->
+<!--  -->
